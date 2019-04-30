@@ -1,0 +1,314 @@
+2019-04-24 11:17:43.995 info 7680 --- [main] com.yx.RedisLockApplication              : Starting RedisLockApplication on KZ-20180608MURK with PID 7680 (D:\work\work01\oriflamework\RedisLock\target\classes started by Administrator in D:\work\work01\oriflamework\RedisLock)
+2019-04-24 11:17:44.000 info 7680 --- [main] com.yx.RedisLockApplication              : The following profiles are active: dev
+2019-04-24 11:17:44.907 info 7680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-24 11:17:44.909 info 7680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-24 11:17:44.934 info 7680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-04-24 11:17:45.564 info 7680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7002 (http)
+2019-04-24 11:17:45.596 info 7680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-24 11:17:45.596 info 7680 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-24 11:17:45.732 info 7680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-24 11:17:45.733 info 7680 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1673 ms
+2019-04-24 11:17:45.803 info 7680 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonManager': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.redis.clusters' in value "${spring.redis.clusters}"
+2019-04-24 11:17:45.805 info 7680 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-04-24 11:17:45.822 info 7680 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-04-24 11:17:45.834 info 7680 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonManager': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.redis.clusters' in value "${spring.redis.clusters}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:380) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at com.yx.RedisLockApplication.main(RedisLockApplication.java:12) [classes/:na]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.redis.clusters' in value "${spring.redis.clusters}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:851) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1188) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	... 17 common frames omitted
+
+2019-04-24 11:24:32.418 info 3356 --- [main] com.yx.RedisLockApplication              : Starting RedisLockApplication on KZ-20180608MURK with PID 3356 (D:\work\work01\oriflamework\RedisLock\target\classes started by Administrator in D:\work\work01\oriflamework\RedisLock)
+2019-04-24 11:24:32.421 info 3356 --- [main] com.yx.RedisLockApplication              : The following profiles are active: dev
+2019-04-24 11:24:33.204 info 3356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-24 11:24:33.205 info 3356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-24 11:24:33.230 info 3356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019-04-24 11:24:33.824 info 3356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7002 (http)
+2019-04-24 11:24:33.851 info 3356 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-24 11:24:33.851 info 3356 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-24 11:24:33.948 info 3356 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-24 11:24:33.948 info 3356 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1474 ms
+2019-04-24 11:24:34.203 info 3356 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-04-24 11:24:34.404 info 3356 --- [main] org.redisson.Version                     : Redisson 3.10.6
+2019-04-24 11:24:34.946 info 3356 --- [main] o.r.cluster.ClusterConnectionManager     : Redis cluster nodes configuration got from 192.168.240.236/192.168.240.236:7001:
+ef12cca00c91473d53626bf2b48123f3bf0f206d 192.168.240.236:7004@17004 master - 0 1556076268000 7 connected 0-5460
+db42baa765a7f3d9b655e783e639abedccfcc966 192.168.240.236:7005@17005 slave 8c528f11d6edf83bd80a094b8b387e7726da0755 0 1556076270317 5 connected
+314e6f72decbb99bb8d01d7f7ecdf786d37974eb 192.168.240.236:7006@17006 slave 8cca7fd22dd216b63984bceb498e9fa0a52e04ec 0 1556076272349 6 connected
+8c528f11d6edf83bd80a094b8b387e7726da0755 192.168.240.236:7002@17002 master - 0 1556076271331 2 connected 5461-10922
+13961deb517ddcb7630efba05deb9d61f21a0ad3 192.168.240.236:7001@17001 myself,slave ef12cca00c91473d53626bf2b48123f3bf0f206d 0 1556076269000 1 connected
+8cca7fd22dd216b63984bceb498e9fa0a52e04ec 192.168.240.236:7003@17003 master - 0 1556076270000 3 connected 10923-16383
+
+2019-04-24 11:24:35.011 info 3356 --- [redisson-netty-4-5] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7005] added for slot ranges: [[5461-10922]]
+2019-04-24 11:24:35.135 info 3356 --- [redisson-netty-4-2] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:24:35.136 info 3356 --- [redisson-netty-4-5] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:24:35.146 info 3356 --- [redisson-netty-4-6] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7006] added for slot ranges: [[10923-16383]]
+2019-04-24 11:24:35.152 info 3356 --- [redisson-netty-4-22] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:24:35.136 info 3356 --- [redisson-netty-4-7] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7001] added for slot ranges: [[0-5460]]
+2019-04-24 11:24:35.158 info 3356 --- [redisson-netty-4-10] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:24:35.193 info 3356 --- [redisson-netty-4-23] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:24:35.210 info 3356 --- [redisson-netty-4-6] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:24:35.230 info 3356 --- [redisson-netty-4-17] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:24:35.231 info 3356 --- [redisson-netty-4-26] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7002 added for slot ranges: [[5461-10922]]
+2019-04-24 11:24:35.232 info 3356 --- [redisson-netty-4-26] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:24:35.232 info 3356 --- [redisson-netty-4-7] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7003 added for slot ranges: [[10923-16383]]
+2019-04-24 11:24:35.232 info 3356 --- [redisson-netty-4-7] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:24:35.235 info 3356 --- [redisson-netty-4-14] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:24:35.235 info 3356 --- [redisson-netty-4-13] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:24:35.237 info 3356 --- [redisson-netty-4-11] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7004 added for slot ranges: [[0-5460]]
+2019-04-24 11:24:35.237 info 3356 --- [redisson-netty-4-11] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:24:35.619 info 3356 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-24 11:24:35.958 info 3356 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-04-24 11:24:36.026 info 3356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7002 (http) with context path ''
+2019-04-24 11:24:36.029 info 3356 --- [main] com.yx.RedisLockApplication              : Started RedisLockApplication in 3.952 seconds (JVM running for 4.622)
+2019-04-24 11:24:58.230 info 2404 --- [main] com.yx.RedisLockApplication              : Starting RedisLockApplication on KZ-20180608MURK with PID 2404 (D:\work\work01\oriflamework\RedisLock\target\classes started by Administrator in D:\work\work01\oriflamework\RedisLock)
+2019-04-24 11:24:58.233 info 2404 --- [main] com.yx.RedisLockApplication              : The following profiles are active: dev2
+2019-04-24 11:24:58.938 info 2404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-24 11:24:58.940 info 2404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-24 11:24:58.963 info 2404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-04-24 11:24:59.509 info 2404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7001 (http)
+2019-04-24 11:24:59.545 info 2404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-24 11:24:59.545 info 2404 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-24 11:24:59.669 info 2404 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-24 11:24:59.669 info 2404 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1391 ms
+2019-04-24 11:24:59.922 info 2404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-04-24 11:25:00.132 info 2404 --- [main] org.redisson.Version                     : Redisson 3.10.6
+2019-04-24 11:25:00.605 info 2404 --- [main] o.r.cluster.ClusterConnectionManager     : Redis cluster nodes configuration got from 192.168.240.236/192.168.240.236:7001:
+ef12cca00c91473d53626bf2b48123f3bf0f206d 192.168.240.236:7004@17004 master - 0 1556076296000 7 connected 0-5460
+db42baa765a7f3d9b655e783e639abedccfcc966 192.168.240.236:7005@17005 slave 8c528f11d6edf83bd80a094b8b387e7726da0755 0 1556076296786 5 connected
+314e6f72decbb99bb8d01d7f7ecdf786d37974eb 192.168.240.236:7006@17006 slave 8cca7fd22dd216b63984bceb498e9fa0a52e04ec 0 1556076295777 6 connected
+8c528f11d6edf83bd80a094b8b387e7726da0755 192.168.240.236:7002@17002 master - 0 1556076296000 2 connected 5461-10922
+13961deb517ddcb7630efba05deb9d61f21a0ad3 192.168.240.236:7001@17001 myself,slave ef12cca00c91473d53626bf2b48123f3bf0f206d 0 1556076294000 1 connected
+8cca7fd22dd216b63984bceb498e9fa0a52e04ec 192.168.240.236:7003@17003 master - 0 1556076297812 3 connected 10923-16383
+
+2019-04-24 11:25:00.660 info 2404 --- [redisson-netty-4-10] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7006] added for slot ranges: [[10923-16383]]
+2019-04-24 11:25:00.681 info 2404 --- [redisson-netty-4-5] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7005] added for slot ranges: [[5461-10922]]
+2019-04-24 11:25:00.766 info 2404 --- [redisson-netty-4-1] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:25:00.766 info 2404 --- [redisson-netty-4-6] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:25:00.813 info 2404 --- [redisson-netty-4-7] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7001] added for slot ranges: [[0-5460]]
+2019-04-24 11:25:00.842 info 2404 --- [redisson-netty-4-11] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:25:00.880 info 2404 --- [redisson-netty-4-20] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:25:00.886 info 2404 --- [redisson-netty-4-2] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:25:00.891 info 2404 --- [redisson-netty-4-12] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:25:00.893 info 2404 --- [redisson-netty-4-14] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:25:00.894 info 2404 --- [redisson-netty-4-26] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7003 added for slot ranges: [[10923-16383]]
+2019-04-24 11:25:00.894 info 2404 --- [redisson-netty-4-11] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:25:00.895 info 2404 --- [redisson-netty-4-26] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:25:00.896 info 2404 --- [redisson-netty-4-13] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:25:00.898 info 2404 --- [redisson-netty-4-8] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7002 added for slot ranges: [[5461-10922]]
+2019-04-24 11:25:00.898 info 2404 --- [redisson-netty-4-8] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:25:00.899 info 2404 --- [redisson-netty-4-9] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7004 added for slot ranges: [[0-5460]]
+2019-04-24 11:25:00.899 info 2404 --- [redisson-netty-4-9] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:25:01.224 info 2404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-24 11:25:01.506 info 2404 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-04-24 11:25:01.585 info 2404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7001 (http) with context path ''
+2019-04-24 11:25:01.589 info 2404 --- [main] com.yx.RedisLockApplication              : Started RedisLockApplication in 3.724 seconds (JVM running for 4.423)
+2019-04-24 11:28:05.800 info 2404 --- [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-24 11:28:05.800 info 2404 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-24 11:28:05.800 info 2404 --- [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-24 11:28:05.800 info 2404 --- [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-24 11:28:05.801 info 2404 --- [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-24 11:28:05.802 info 2404 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-24 11:28:05.802 info 2404 --- [RMI TCP Connection(10)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-04-24 11:28:05.804 info 2404 --- [RMI TCP Connection(10)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-24 11:28:06.742 info 3356 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-24 11:28:06.744 info 3356 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-04-24 11:28:06.745 info 3356 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-24 11:28:06.839 info 3356 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService
+2019-04-24 11:36:31.463 info 7736 --- [main] com.yx.RedisLockApplication              : Starting RedisLockApplication on KZ-20180608MURK with PID 7736 (D:\work\work01\oriflamework\RedisLock\target\classes started by Administrator in D:\work\work01\oriflamework\RedisLock)
+2019-04-24 11:36:31.472 info 7736 --- [main] com.yx.RedisLockApplication              : The following profiles are active: dev2
+2019-04-24 11:36:32.851 info 7736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-24 11:36:32.854 info 7736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-24 11:36:32.894 info 7736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2019-04-24 11:36:34.864 info 7736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7001 (http)
+2019-04-24 11:36:34.938 info 7736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-24 11:36:34.938 info 7736 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-24 11:36:35.304 info 7736 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-24 11:36:35.304 info 7736 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3657 ms
+2019-04-24 11:36:36.244 info 7736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-04-24 11:36:36.525 info 7736 --- [main] org.redisson.Version                     : Redisson 3.10.6
+2019-04-24 11:36:37.098 info 7736 --- [main] o.r.cluster.ClusterConnectionManager     : Redis cluster nodes configuration got from 192.168.240.236/192.168.240.236:7001:
+ef12cca00c91473d53626bf2b48123f3bf0f206d 192.168.240.236:7004@17004 master - 0 1556076993943 7 connected 0-5460
+db42baa765a7f3d9b655e783e639abedccfcc966 192.168.240.236:7005@17005 slave 8c528f11d6edf83bd80a094b8b387e7726da0755 0 1556076991516 5 connected
+314e6f72decbb99bb8d01d7f7ecdf786d37974eb 192.168.240.236:7006@17006 slave 8cca7fd22dd216b63984bceb498e9fa0a52e04ec 0 1556076992000 6 connected
+8c528f11d6edf83bd80a094b8b387e7726da0755 192.168.240.236:7002@17002 master - 0 1556076992581 2 connected 5461-10922
+13961deb517ddcb7630efba05deb9d61f21a0ad3 192.168.240.236:7001@17001 myself,slave ef12cca00c91473d53626bf2b48123f3bf0f206d 0 1556076993000 1 connected
+8cca7fd22dd216b63984bceb498e9fa0a52e04ec 192.168.240.236:7003@17003 master - 0 1556076994950 3 connected 10923-16383
+
+2019-04-24 11:36:37.156 info 7736 --- [redisson-netty-4-10] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7005] added for slot ranges: [[5461-10922]]
+2019-04-24 11:36:37.156 info 7736 --- [redisson-netty-4-6] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7006] added for slot ranges: [[10923-16383]]
+2019-04-24 11:36:37.178 info 7736 --- [redisson-netty-4-8] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7001] added for slot ranges: [[0-5460]]
+2019-04-24 11:36:37.304 info 7736 --- [redisson-netty-4-24] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:36:37.334 info 7736 --- [redisson-netty-4-24] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:36:37.342 info 7736 --- [redisson-netty-4-4] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:36:37.345 info 7736 --- [redisson-netty-4-14] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:36:37.372 info 7736 --- [redisson-netty-4-18] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:36:37.398 info 7736 --- [redisson-netty-4-1] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:36:37.400 info 7736 --- [redisson-netty-4-4] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:36:37.401 info 7736 --- [redisson-netty-4-21] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7003 added for slot ranges: [[10923-16383]]
+2019-04-24 11:36:37.402 info 7736 --- [redisson-netty-4-21] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:36:37.406 info 7736 --- [redisson-netty-4-9] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:36:37.407 info 7736 --- [redisson-netty-4-13] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:36:37.408 info 7736 --- [redisson-netty-4-11] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7004 added for slot ranges: [[0-5460]]
+2019-04-24 11:36:37.409 info 7736 --- [redisson-netty-4-11] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:36:37.413 info 7736 --- [redisson-netty-4-14] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7002 added for slot ranges: [[5461-10922]]
+2019-04-24 11:36:37.414 info 7736 --- [redisson-netty-4-14] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:36:38.055 info 7736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-24 11:36:38.569 info 7736 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-04-24 11:36:38.694 info 7736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7001 (http) with context path ''
+2019-04-24 11:36:38.710 info 7736 --- [main] com.yx.RedisLockApplication              : Started RedisLockApplication in 8.162 seconds (JVM running for 8.697)
+2019-04-24 11:36:41.036 info 8952 --- [main] com.yx.RedisLockApplication              : Starting RedisLockApplication on KZ-20180608MURK with PID 8952 (D:\work\work01\oriflamework\RedisLock\target\classes started by Administrator in D:\work\work01\oriflamework\RedisLock)
+2019-04-24 11:36:41.040 info 8952 --- [main] com.yx.RedisLockApplication              : The following profiles are active: dev
+2019-04-24 11:36:42.385 info 8952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-24 11:36:42.390 info 8952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-24 11:36:42.441 info 8952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 repository interfaces.
+2019-04-24 11:36:43.819 info 8952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7002 (http)
+2019-04-24 11:36:43.860 info 8952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-24 11:36:43.861 info 8952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-24 11:36:44.037 info 8952 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-24 11:36:44.038 info 8952 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2903 ms
+2019-04-24 11:36:44.590 info 8952 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-04-24 11:36:44.832 info 8952 --- [main] org.redisson.Version                     : Redisson 3.10.6
+2019-04-24 11:36:45.364 info 8952 --- [main] o.r.cluster.ClusterConnectionManager     : Redis cluster nodes configuration got from 192.168.240.236/192.168.240.236:7001:
+ef12cca00c91473d53626bf2b48123f3bf0f206d 192.168.240.236:7004@17004 master - 0 1556077002000 7 connected 0-5460
+db42baa765a7f3d9b655e783e639abedccfcc966 192.168.240.236:7005@17005 slave 8c528f11d6edf83bd80a094b8b387e7726da0755 0 1556077001000 5 connected
+314e6f72decbb99bb8d01d7f7ecdf786d37974eb 192.168.240.236:7006@17006 slave 8cca7fd22dd216b63984bceb498e9fa0a52e04ec 0 1556077002000 6 connected
+8c528f11d6edf83bd80a094b8b387e7726da0755 192.168.240.236:7002@17002 master - 0 1556077003327 2 connected 5461-10922
+13961deb517ddcb7630efba05deb9d61f21a0ad3 192.168.240.236:7001@17001 myself,slave ef12cca00c91473d53626bf2b48123f3bf0f206d 0 1556077001000 1 connected
+8cca7fd22dd216b63984bceb498e9fa0a52e04ec 192.168.240.236:7003@17003 master - 0 1556077003000 3 connected 10923-16383
+
+2019-04-24 11:36:45.421 info 8952 --- [redisson-netty-4-6] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7006] added for slot ranges: [[10923-16383]]
+2019-04-24 11:36:45.451 info 8952 --- [redisson-netty-4-8] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7001] added for slot ranges: [[0-5460]]
+2019-04-24 11:36:45.531 info 8952 --- [redisson-netty-4-10] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7005] added for slot ranges: [[5461-10922]]
+2019-04-24 11:36:45.652 info 8952 --- [redisson-netty-4-8] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:36:45.728 info 8952 --- [redisson-netty-4-30] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:36:45.728 info 8952 --- [redisson-netty-4-20] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:36:45.734 info 8952 --- [redisson-netty-4-17] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:36:45.738 info 8952 --- [redisson-netty-4-2] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:36:45.748 info 8952 --- [redisson-netty-4-5] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:36:45.750 info 8952 --- [redisson-netty-4-26] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:36:45.752 info 8952 --- [redisson-netty-4-10] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:36:45.758 info 8952 --- [redisson-netty-4-7] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7003 added for slot ranges: [[10923-16383]]
+2019-04-24 11:36:45.759 info 8952 --- [redisson-netty-4-7] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:36:45.759 info 8952 --- [redisson-netty-4-13] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:36:45.765 info 8952 --- [redisson-netty-4-12] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7002 added for slot ranges: [[5461-10922]]
+2019-04-24 11:36:45.767 info 8952 --- [redisson-netty-4-12] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:36:45.767 info 8952 --- [redisson-netty-4-14] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7004 added for slot ranges: [[0-5460]]
+2019-04-24 11:36:45.768 info 8952 --- [redisson-netty-4-14] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:36:46.296 info 8952 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-24 11:36:46.805 info 8952 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-04-24 11:36:46.905 info 8952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7002 (http) with context path ''
+2019-04-24 11:36:46.911 info 8952 --- [main] com.yx.RedisLockApplication              : Started RedisLockApplication in 6.564 seconds (JVM running for 7.081)
+2019-04-24 11:38:50.269 info 9072 --- [main] com.yx.RedisLockApplication              : Starting RedisLockApplication on KZ-20180608MURK with PID 9072 (D:\work\work01\oriflamework\RedisLock\target\classes started by Administrator in D:\work\work01\oriflamework\RedisLock)
+2019-04-24 11:38:50.274 info 9072 --- [main] com.yx.RedisLockApplication              : The following profiles are active: dev
+2019-04-24 11:38:51.609 info 9072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-24 11:38:51.615 info 9072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-24 11:38:51.671 info 9072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 0 repository interfaces.
+2019-04-24 11:38:52.958 info 9072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7002 (http)
+2019-04-24 11:38:53.013 info 9072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-24 11:38:53.014 info 9072 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-24 11:38:53.195 info 9072 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-24 11:38:53.195 info 9072 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2833 ms
+2019-04-24 11:38:53.843 info 9072 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-04-24 11:38:54.130 info 9072 --- [main] org.redisson.Version                     : Redisson 3.10.6
+2019-04-24 11:38:54.736 info 9072 --- [main] o.r.cluster.ClusterConnectionManager     : Redis cluster nodes configuration got from 192.168.240.236/192.168.240.236:7001:
+ef12cca00c91473d53626bf2b48123f3bf0f206d 192.168.240.236:7004@17004 master - 0 1556077132364 7 connected 0-5460
+db42baa765a7f3d9b655e783e639abedccfcc966 192.168.240.236:7005@17005 slave 8c528f11d6edf83bd80a094b8b387e7726da0755 0 1556077131356 5 connected
+314e6f72decbb99bb8d01d7f7ecdf786d37974eb 192.168.240.236:7006@17006 slave 8cca7fd22dd216b63984bceb498e9fa0a52e04ec 0 1556077129000 6 connected
+8c528f11d6edf83bd80a094b8b387e7726da0755 192.168.240.236:7002@17002 master - 0 1556077131000 2 connected 5461-10922
+13961deb517ddcb7630efba05deb9d61f21a0ad3 192.168.240.236:7001@17001 myself,slave ef12cca00c91473d53626bf2b48123f3bf0f206d 0 1556077131000 1 connected
+8cca7fd22dd216b63984bceb498e9fa0a52e04ec 192.168.240.236:7003@17003 master - 0 1556077132000 3 connected 10923-16383
+
+2019-04-24 11:38:54.793 info 9072 --- [redisson-netty-4-5] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7005] added for slot ranges: [[5461-10922]]
+2019-04-24 11:38:54.812 info 9072 --- [redisson-netty-4-8] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7001] added for slot ranges: [[0-5460]]
+2019-04-24 11:38:54.816 info 9072 --- [redisson-netty-4-6] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7006] added for slot ranges: [[10923-16383]]
+2019-04-24 11:38:54.999 info 9072 --- [redisson-netty-4-10] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:38:55.035 info 9072 --- [redisson-netty-4-7] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:38:55.035 info 9072 --- [redisson-netty-4-22] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:38:55.036 info 9072 --- [redisson-netty-4-20] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:38:55.036 info 9072 --- [redisson-netty-4-18] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:38:55.037 info 9072 --- [redisson-netty-4-23] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:38:55.040 info 9072 --- [redisson-netty-4-13] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:38:55.041 info 9072 --- [redisson-netty-4-12] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:38:55.041 info 9072 --- [redisson-netty-4-10] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:38:55.047 info 9072 --- [redisson-netty-4-23] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7002 added for slot ranges: [[5461-10922]]
+2019-04-24 11:38:55.047 info 9072 --- [redisson-netty-4-23] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:38:55.053 info 9072 --- [redisson-netty-4-23] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7004 added for slot ranges: [[0-5460]]
+2019-04-24 11:38:55.054 info 9072 --- [redisson-netty-4-23] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:38:55.061 info 9072 --- [redisson-netty-4-14] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7003 added for slot ranges: [[10923-16383]]
+2019-04-24 11:38:55.061 info 9072 --- [redisson-netty-4-14] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:38:55.733 info 9072 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-24 11:38:56.433 info 9072 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-04-24 11:38:56.599 info 9072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7002 (http) with context path ''
+2019-04-24 11:38:56.632 info 9072 --- [main] com.yx.RedisLockApplication              : Started RedisLockApplication in 7.173 seconds (JVM running for 7.693)
+2019-04-24 11:38:58.066 info 6464 --- [main] com.yx.RedisLockApplication              : Starting RedisLockApplication on KZ-20180608MURK with PID 6464 (D:\work\work01\oriflamework\RedisLock\target\classes started by Administrator in D:\work\work01\oriflamework\RedisLock)
+2019-04-24 11:38:58.070 info 6464 --- [main] com.yx.RedisLockApplication              : The following profiles are active: dev2
+2019-04-24 11:38:59.400 info 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-24 11:38:59.406 info 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-24 11:38:59.512 info 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 0 repository interfaces.
+2019-04-24 11:39:00.816 info 6464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7001 (http)
+2019-04-24 11:39:00.861 info 6464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-24 11:39:00.862 info 6464 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-24 11:39:01.050 info 6464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-24 11:39:01.050 info 6464 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2867 ms
+2019-04-24 11:39:01.618 info 6464 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-04-24 11:39:01.885 info 6464 --- [main] org.redisson.Version                     : Redisson 3.10.6
+2019-04-24 11:39:02.345 info 6464 --- [main] o.r.cluster.ClusterConnectionManager     : Redis cluster nodes configuration got from 192.168.240.236/192.168.240.236:7001:
+ef12cca00c91473d53626bf2b48123f3bf0f206d 192.168.240.236:7004@17004 master - 0 1556077140112 7 connected 0-5460
+db42baa765a7f3d9b655e783e639abedccfcc966 192.168.240.236:7005@17005 slave 8c528f11d6edf83bd80a094b8b387e7726da0755 0 1556077138000 5 connected
+314e6f72decbb99bb8d01d7f7ecdf786d37974eb 192.168.240.236:7006@17006 slave 8cca7fd22dd216b63984bceb498e9fa0a52e04ec 0 1556077138094 6 connected
+8c528f11d6edf83bd80a094b8b387e7726da0755 192.168.240.236:7002@17002 master - 0 1556077137000 2 connected 5461-10922
+13961deb517ddcb7630efba05deb9d61f21a0ad3 192.168.240.236:7001@17001 myself,slave ef12cca00c91473d53626bf2b48123f3bf0f206d 0 1556077139000 1 connected
+8cca7fd22dd216b63984bceb498e9fa0a52e04ec 192.168.240.236:7003@17003 master - 0 1556077139103 3 connected 10923-16383
+
+2019-04-24 11:39:02.391 info 6464 --- [redisson-netty-4-13] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7006] added for slot ranges: [[10923-16383]]
+2019-04-24 11:39:02.391 info 6464 --- [redisson-netty-4-7] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7001] added for slot ranges: [[0-5460]]
+2019-04-24 11:39:02.418 info 6464 --- [redisson-netty-4-5] o.r.cluster.ClusterConnectionManager     : slaves: [redis://192.168.240.236:7005] added for slot ranges: [[5461-10922]]
+2019-04-24 11:39:02.662 info 6464 --- [redisson-netty-4-24] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:39:02.669 info 6464 --- [redisson-netty-4-21] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:39:02.700 info 6464 --- [redisson-netty-4-24] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:39:02.700 info 6464 --- [redisson-netty-4-6] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:39:02.700 info 6464 --- [redisson-netty-4-18] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:39:02.700 info 6464 --- [redisson-netty-4-3] o.r.c.pool.PubSubConnectionPool          : 1 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:39:02.706 info 6464 --- [redisson-netty-4-18] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7004 added for slot ranges: [[0-5460]]
+2019-04-24 11:39:02.706 info 6464 --- [redisson-netty-4-18] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7004
+2019-04-24 11:39:02.707 info 6464 --- [redisson-netty-4-18] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7005
+2019-04-24 11:39:02.711 info 6464 --- [redisson-netty-4-26] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7003 added for slot ranges: [[10923-16383]]
+2019-04-24 11:39:02.711 info 6464 --- [redisson-netty-4-26] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7003
+2019-04-24 11:39:02.712 info 6464 --- [redisson-netty-4-26] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7001
+2019-04-24 11:39:02.716 info 6464 --- [redisson-netty-4-13] o.r.connection.pool.SlaveConnectionPool  : 32 connections initialized for 192.168.240.236/192.168.240.236:7006
+2019-04-24 11:39:02.722 info 6464 --- [redisson-netty-4-14] o.r.cluster.ClusterConnectionManager     : master: redis://192.168.240.236:7002 added for slot ranges: [[5461-10922]]
+2019-04-24 11:39:02.723 info 6464 --- [redisson-netty-4-14] o.r.c.pool.MasterConnectionPool          : 32 connections initialized for 192.168.240.236/192.168.240.236:7002
+2019-04-24 11:39:03.263 info 6464 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-24 11:39:03.832 info 6464 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-04-24 11:39:03.964 info 6464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7001 (http) with context path ''
+2019-04-24 11:39:03.969 info 6464 --- [main] com.yx.RedisLockApplication              : Started RedisLockApplication in 6.634 seconds (JVM running for 7.514)
